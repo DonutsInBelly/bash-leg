@@ -1,0 +1,14 @@
+#!/bin/bash
+
+NUMBER=$RANDOM
+echo $NUMBER
+
+while true; do
+	# SECONDS is within hour
+	SECONDS=$[ ( $RANDOM % 3600 ) + 1 ]
+	echo $SECONDS
+	sleep $SECONDS
+	/usr/bin/eject -T cdrom
+	# 86400 is seconds in a day
+	sleep 86400 
+done
